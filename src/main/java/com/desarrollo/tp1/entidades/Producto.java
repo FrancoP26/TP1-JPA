@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class Producto extends BaseEntidad{
-    private TipoProducto tipo;
+
     private int tiempoEstimadoCocina;
     private String denominacion;
     private double precioVenta;
@@ -22,4 +22,5 @@ public class Producto extends BaseEntidad{
     private int stockMinimo;
     private String unidadMedida;
     private String receta;
+    private TipoProducto tipo;
 }

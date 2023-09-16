@@ -18,10 +18,12 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class Pedido extends BaseEntidad {
-    private Estado estado;
+
+    @Temporal(TemporalType.DATE)
     private Date fecha;
-    private TipoEnvio tipoEnvio;
     private double total;
+    private TipoEnvio tipoEnvio;
+    private Estado estado;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "factura_id")
